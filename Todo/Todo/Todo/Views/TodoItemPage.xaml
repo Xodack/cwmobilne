@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo.Views.TodoItemPage"
+             Title="{Binding Name}"
+             BackgroundColor="LightCyan">
+    <StackLayout Margin="20"
+                 VerticalOptions="StartAndExpand">
+        <Label Text="Nazwa" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="Notatki" />
+        <Entry Text="{Binding Notes}" />
+        <Label Text="Ukończone" />
+        <Switch IsToggled="{Binding Done}" />
+        <Button Text="Zapisz"
+                Clicked="OnSaveClicked" />
+        <Button Text="Usuń"
+                Clicked="OnDeleteClicked" />
+        <Button Text="Zamknij"
+                Clicked="OnCancelClicked" />
+    </StackLayout>
+</ContentPage>
